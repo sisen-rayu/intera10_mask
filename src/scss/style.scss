@@ -6,20 +6,20 @@
 }
 
 body {
-  background-color: rgb(141, 118, 235);
+  background-color: #E5CCAF;
   color: #fff;
 }
 
 section {
   min-height: 100vh;
   width: 100%;
-  background-color: rgb(119, 19, 89);
+  background-color: #BE3455; //viva
   &:nth-child(2) {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(114, 45, 157);
+    background-color: #E38298;
     padding: 5rem;
     margin-top: 50rem;
     position: relative;
@@ -39,19 +39,20 @@ section {
 
 h1 {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 50%;
-  transform: translate(-50%, -30%);
-  z-index: 1;
-  color: #fff;
-  text-shadow: 0 0 .1em rgb(0, 0, 0);
+  transform: translate(-50%, -35%);
+  z-index: 2;
+  color: rgb(241, 212, 178);
+  text-shadow: 0 0 .01em rgb(240, 202, 211);
   font-size: 40px;
+  letter-spacing: 0.7em;
 }
 
 h2 {
   font-size: 30px;
   margin-bottom: 10px;
-  color: rgb(224, 100, 141);
+  color: #B3B1A1;
 }
 
 img {
@@ -65,8 +66,6 @@ img {
   clip-path: circle(50px at center);
 }
 
-.container {
-}
 // ===================================================================
 // scroll
 // ===================================================================
@@ -91,7 +90,7 @@ img {
   width: 10px;
   border-radius: 5px;
   // height: 100%;
-  background: linear-gradient(to top, #008aff, #00ffe7);
+  background: linear-gradient(to top, #BB2649, #EDCDC2);
   animation: animate 5s linear infinite;
   z-index: 100;
 }
@@ -133,3 +132,34 @@ img {
   filter: blur(30px);
   z-index: 100;
 }
+
+
+/***************************************************
+// svg animation
+**************************************************/
+.heading {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  z-index: 1;
+}
+
+svg .svg-elem-1 {
+  stroke-dashoffset: 1843.5140380859375px;
+  stroke-dasharray: 1843.5140380859375px;
+  fill: transparent;
+  animation:new-written 6s infinite alternate;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s,
+  fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;
+}
+
+
+@keyframes new-written {
+  0% {
+    stroke-dashoffset:0px;
+  }
+  100% {
+    stroke-dashoffset:1843.5140380859375px;
+  }
+  }
